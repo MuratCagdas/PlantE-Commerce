@@ -1,0 +1,29 @@
+img {
+    height: 20vh;
+    width: 100%;
+}
+
+.button {
+    color: black;
+    border: none;
+}
+
+.card-peace,
+.card-title,
+.card-price,
+.card-delete {
+    font-family: 'Montserrat', sans-serif;
+    padding-top: 3px;
+    padding-bottom: 3px;
+
+}
+
+.input-group {
+    width: 25%;
+}
+
+#basket {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 32px;
+
+}

@@ -1,0 +1,130 @@
+{
+  "users": [
+    {
+      "email": "admin@hotmail.com",
+      "password": "$2a$10$7S16shPsFAgaV1XyDZqNyu/vBGTTlovMMRcz7LtBYIquzQzIJ/5bK",
+      "name": "adminadmin",
+      "surname": "admin2",
+      "repassword": "123456",
+      "role": "admin",
+      "id": 1
+    },
+    {
+      "email": "murat@hotmail.com",
+      "password": "$2a$10$85i9LxVqAXxLYAz8p9iCQuewQnO83XRRXCVRIeYJOET3iRjWW6MO2",
+      "name": "murat",
+      "surname": "murat1",
+      "repassword": "asdfg",
+      "role": "user",
+      "id": 2
+    }
+  ],
+  "products": [
+    {
+      "name": "Snake Plant (Sansevieria trifasciata)",
+      "type": "indoor",
+      "price": 25,
+      "information": "Commonly known as mother-in-law’s tongue, the snake plant has a striking form and a variety of colors to choose from. It produces “pups,” baby snake plants that can be separated from the mother plant and potted up to fill the rest of your house. When conditions are optimal, the snake plant will push up a delicate stalk with white flowers on it.\n\n",
+      "url": "https://gardenerspath.com/wp-content/uploads/2017/10/A-Guide-to-Basic-Care-of-Durable-Houseplants.jpg",
+      "id": 1
+    },
+    {
+      "name": "Dumb Cane (Dieffenbachia)",
+      "type": "indoor",
+      "price": 20,
+      "information": "Dumb cane forms a very attractive, upright shape that fills in an otherwise empty area. Its common name “dumb cane” is attributed to the throat-numbing effect it has when ingested, making it impossible for a person to speak. A word to the wise: don’t eat it!",
+      "url": "https://gardenerspath.com/wp-content/uploads/2017/10/Guide-to-Houseplants-Grow-Dumb-Cane.jpg",
+      "id": 2
+    },
+    {
+      "name": "Peace Lily (Spathyphillum)",
+      "type": "indoor",
+      "price": 27,
+      "information": "The peace lily is a dark-leafed plant that produces an iconic white “flower.” It is actually a specialized leaf bract, or a modified leaf.\nIts broad leaves form an attractive and lush foliage that’s far from boring, and the beautiful white flowers act like a bold exclamation mark demanding attention.",
+      "url": "https://gardenerspath.com/wp-content/uploads/2017/10/Houseplant-Guide-Peace-Lily.jpg",
+      "id": 3
+    },
+    {
+      "name": " Pothos (Epipremnum)",
+      "type": "indoor",
+      "price": 14,
+      "information": "Practically indestructible, the pothos plant is without doubt the most common plant in my home. My fiance delights in propagating new plants from single cuttings taken from a host plant.\n\n",
+      "url": "https://gardenerspath.com/wp-content/uploads/2017/10/Houseplant-Primer-Guide-to-Growing-Pothos.jpg",
+      "id": 4
+    },
+    {
+      "name": "Chickweed",
+      "type": "outdoor",
+      "price": 5,
+      "information": "Chickweed (Stellaria media) is an invasive weed (it’s right there in the name!) that came to North America from Europe. Fortunately, it also has edible leaves, stems, and flowers, so you can put it to good use.",
+      "url": "https://gardenerspath.com/wp-content/uploads/2022/04/Common-Chickweed-in-Flower.jpg",
+      "id": 5
+    },
+    {
+      "name": "Chicory",
+      "type": "outdoor",
+      "price": 35,
+      "information": "More and more these days, chicory (Cichorium intybus) is being cultivated once again as a veggie and a coffee substitute rather than being pulled as an unpleasant weed.\nIt’s easily identified by its bright blue-purple inflorescences on stalks that grow up to three feet tall. Look for it on roadsides and in disturbed areas.",
+      "url": "https://gardenerspath.com/wp-content/uploads/2022/04/Common-Chicory-Flowers.jpg",
+      "id": 6
+    },
+    {
+      "name": "Lady’s Thumb",
+      "type": "outdoor",
+      "price": 6,
+      "information": "The weed has lanceolate leaves on brown-red stalks and every part is edible, if not necessarily flavorful. Look for the dark pigment at the center of the leaf, which is said to resemble a thumbprint.",
+      "url": "https://gardenerspath.com/wp-content/uploads/2022/04/Spotted-Ladys-Thumb-Flowers.jpg",
+      "id": 7
+    },
+    {
+      "name": "Valerian",
+      "type": "outdoor",
+      "price": 10,
+      "information": "Red valerian (Centranthus ruber) is one of those weeds that has earned some newfound respect.\nNow, instead of shunning it, some people are welcoming valerian for its bright pink pollinator-attracting flowers. But it can be invasive in some areas, so it’s best to use it up rather than letting it run rampant.",
+      "url": "https://gardenerspath.com/wp-content/uploads/2022/04/Red-Valerian.jpg",
+      "id": 8
+    },
+    {
+      "name": "Tokyo Pot ",
+      "type": "pots",
+      "price": 11,
+      "information": "L/22cm\nMaterial of construction: ceramic.\nPot colour: black base.\nDecorative pot, do not water inside.",
+      "url": "https://begreen.imgix.net/6399e2138fabb636485990.jpg?w=1200&h=1200&auto=format",
+      "id": 9
+    },
+    {
+      "name": "Lucca Planter",
+      "type": "pots",
+      "price": 13,
+      "information": "Manufacturing material: recycled and recyclable materials.\nColour of the planter: slate grey.\nInnovative design, which mixes the practicality of watering plants inside the pot with the most classic design and style.",
+      "url": "https://begreen.imgix.net/639c4c1c4e389813447709.jpg?w=1200&h=1200&auto=format",
+      "id": 10
+    },
+    {
+      "name": "Terrarium",
+      "type": "gifts",
+      "price": 53,
+      "information": "They are indoor gardens in a sealed container. The plants and the soil in the terrarium release water vapor – essentially recycling water. The vapor is then collected onto the walls of the vessel and trickles down to the soil. Terrariums are self-nourishing, which is why they require little maintenance, if sealed.",
+      "url": "https://osevio.feo.doracdn.com/resize/c28350b0134c45ba/553/608/Content/Upload/ProductImage/large_mini_elma_balonlu_sirt_sirta_otrn_sevgliebame0063_6_09_2021_10_49_42.jpg",
+      "id": 11
+    }
+  ],
+  "baskets": [],
+  "orders": [],
+  "like": [
+    {
+      "likeproduct": [
+        {
+          "information": "The peace lily is a dark-leafed plant that produces an iconic white “flower.” It is actually a specialized leaf bract, or a modified leaf.\nIts broad leaves form an attractive and lush foliage that’s far from boring, and the beautiful white flowers act like a bold exclamation mark demanding attention.",
+          "name": "Peace Lily (Spathyphillum)",
+          "price": 27,
+          "type": "indoor",
+          "color": "red",
+          "url": "https://gardenerspath.com/wp-content/uploads/2017/10/Houseplant-Guide-Peace-Lily.jpg"
+        }
+      ],
+      "mail": "murat@hotmail.com",
+      "id": 1
+    }
+  ]
+}

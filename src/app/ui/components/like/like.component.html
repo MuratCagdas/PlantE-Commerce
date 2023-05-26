@@ -1,0 +1,45 @@
+<app-header></app-header>
+<div class="container d-md-flex-column align-items-center">
+    <div class="row mt-4">
+        <!-- Card Column -->
+        <div class="col-md-6 " *ngFor="let UserLikeProduct of UserLikeList$  | async">
+            <div class="card mb-3">
+                <div class="row g-0">
+                    <!-- Card Image Column -->
+                    <div class="col-md-4">
+                        <img src='{{UserLikeProduct.url}} ' class="img-fluid rounded-start" alt="...">
+                    </div>
+                    <!-- Card Body Column -->
+                    <div class="col-md-8">
+                        <div class="card-body ">
+                            <!-- Name Column -->
+                            <h5 class="card-title text-center fs-4 ">{{UserLikeProduct.name}}</h5>
+                            <!-- Type Column -->
+                            <h5 class="card-title text-center fs-4 ">{{UserLikeProduct.type}}</h5>
+                            <!-- Information Column -->
+                            <p class="card-text border border-dark">{{UserLikeProduct.information}}</p>
+                            <!-- Price Column -->
+                            <h5 class="card-price text-center fs-3 pt-2">{{UserLikeProduct.price | currency }}</h5>
+                            <div class="d-flex justify-content-center  align-items-center pt-2">
+                                <!-- Basket Button-->
+                                <div>
+                                    <button class="btn btn-success btn-sm me-3" type="button"
+                                        (click)="LikeAddBasket(UserLikeProduct,UserLikeProduct.type,UserLikeProduct.name)">Add
+                                        Basket</button>
+                                </div>
+                                <!-- Like Button -->
+                                <div>
+                                    <button class="btn btn-primary  button" type="button"
+                                        (click)="addLike(UserLikeProduct,UserLikeProduct.color)">
+                                        <mat-icon [ngStyle]="{color:UserLikeProduct.color}"> favorite</mat-icon>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

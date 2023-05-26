@@ -1,0 +1,27 @@
+<!-- Header -->
+<div class="d-flex flex-sm-row justify-content-end bg-success">
+  <div class="text-center py-2 pe-2">
+    <button class="btn btn-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDark"
+      aria-controls="offcanvasDarkLabel" aria-label="sidebar">
+      <mat-icon>menu</mat-icon>
+    </button>
+  </div>
+  <div class=" text-center py-2 pe-2 ">
+    <button type="button" class="btn btn-dark" routerLink="">
+      <mat-icon>first_page</mat-icon>
+    </button>
+  </div>
+</div>
+<!-- Sidebar -->
+<div class="offcanvas offcanvas-start show text-bg-dark" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
+  id="offcanvasDark" aria-labelledby="offcanvasDarkLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasDarkLabel">
+      <mat-icon id="sidebaricon"> format_list_bulleted</mat-icon>
+    </h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <app-sidebar></app-sidebar>
+  </div>
+</div>

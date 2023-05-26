@@ -1,0 +1,23 @@
+img {
+    height: 32vh;
+}
+
+.button {
+    background-color: white;
+    color: black;
+    border: none;
+}
+
+.card-text {
+    resize: none;
+    height: 15vh;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+.card-text,
+.card-title,
+.card-price {
+    font-family: 'Montserrat', sans-serif;
+
+}

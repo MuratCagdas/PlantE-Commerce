@@ -1,0 +1,9 @@
+td,
+th,
+li {
+    vertical-align: middle;
+}
+
+ul {
+    list-style-type: none;
+}

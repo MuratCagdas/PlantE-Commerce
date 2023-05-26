@@ -1,0 +1,27 @@
+<!-- table-->
+<div class="table-responsive-lg pt-5 ">
+  <table class="table table-dark table-striped-columns table-bordered border-white">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Mail</th>
+        <th scope="col">Products</th>
+        <th scope="col">Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let Orderitem of OrdersList$ | async ; index as i ">
+        <th scope="row"> {{i +1}}</th>
+        <td> {{Orderitem.mail}}</td>
+        <td>
+          <ul *ngFor="let item of OrderProductList$ | async ; index as i ">
+            <li class="pe-4" *ngIf="Orderitem.id == item.id ">
+              {{item.peace}} X {{item.name}}
+            </li>
+          </ul>
+        </td>
+        <td [id]="Orderitem.id" controller="orders" [List]="OrdersList$" appDelete></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

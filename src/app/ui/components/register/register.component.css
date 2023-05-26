@@ -1,0 +1,35 @@
+.container {
+    margin-top: 10vh;
+}
+
+
+.form {
+    height: 50vh;
+}
+
+
+#password,
+#repassword,
+.input {
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.mat-raised-button {
+    font-size: 10px;
+    background-color: #3f51b5;
+}
+
+.head {
+    font-family: 'Montserrat', sans-serif;
+}
+
+#registerButton {
+    height: 50px;
+    width: 100px;
+    font-size: 20px;
+}
+
+.form-item {
+    margin-top: 15px;
+}

@@ -1,0 +1,52 @@
+<div class="d-flex justify-content-center mt-5 mb-3  border border-dark" id="product">
+  <!-- İndoor Button -->
+  <button #indoor type="button" class="btn btn-outline-secondary  " [ngClass]="{'active': isBtnActive === 1}"
+    (click)="toggleBtn(1,indoor.value)" value="indoor">İndoor
+  </button>
+  <!-- Outdoor Button -->
+  <button #outdoor type="button" class="btn btn-outline-secondary" [ngClass]="{'active': isBtnActive === 2}"
+    (click)="toggleBtn(2,outdoor.value)" value="outdoor">Outdoor
+  </button>
+  <!-- Pots Button -->
+  <button #pots type="button" class="btn btn-outline-secondary " [ngClass]="{'active': isBtnActive === 3}"
+    (click)="toggleBtn(3,pots.value)" value="pots">Pots
+  </button>
+  <!-- Gifts Button -->
+  <button #gifts type="button" class="btn btn-outline-secondary " [ngClass]="{'active': isBtnActive === 4}"
+    (click)="toggleBtn(4,gifts.value)" value="gifts">Gifts
+  </button>
+</div>
+<!-- Table -->
+<div class="table-responsive-lg">
+  <table class="table table-dark table-striped-columns ">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">name</th>
+        <th scope="col">Type</th>
+        <th scope="col">Price</th>
+        <th scope="col">Edit</th>
+        <th scope="col">Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of ProductList$ | async ; index as i " class="align-middle">
+        <th scope="row"> {{i +1}}</th>
+        <td>{{item.name}}</td>
+        <td>{{item.type}}</td>
+        <td>{{item.price}}</td>
+        <td>
+          <!-- Open Dialog for Updating Product in list-->
+          <button id="editbutton" type="button" class="btn btn-dark" (click)="updateProductDialog(item,item.type)">
+            <mat-icon id="editicon">edit</mat-icon>
+          </button>
+        </td>
+        <td [id]="item.id" controller="products" [List]="ProductList$" appDelete></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<!-- Open Dialog for Adding Product in list-->
+<div class=" justify-content-center ">
+  <button type="button" class="btn btn-secondary  " (click)="openAddProductDialog()">Add Product</button>
+</div>

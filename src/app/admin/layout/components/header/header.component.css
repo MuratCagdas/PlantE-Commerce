@@ -1,0 +1,23 @@
+@media (max-width: 576px) {
+    .offcanvas {
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 992px) {
+    .offcanvas {
+        max-width: 30%;
+    }
+
+}
+
+@media (min-width: 992px) {
+    .offcanvas {
+        max-width: 20%;
+    }
+}
+
+#sidebaricon {
+    width: 12px;
+    height: 12px;
+}

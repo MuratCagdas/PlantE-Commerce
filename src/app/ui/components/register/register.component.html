@@ -1,0 +1,83 @@
+<app-header></app-header>
+<div class="container  ">
+    <div class="row d-flex justify-content-center align-items-center ">
+        <div class="col-md-8 border border-dark">
+            <!-- Form  Title-->
+            <div class="text-center pt-3">
+                <h2 class="head">REGİSTER FORM</h2>
+            </div>
+            <!-- Form  -->
+            <div class="form ">
+                <form [formGroup]="Registerform" (ngSubmit)="RegisterSubmit(Registerform.value)">
+                    <!-- Name Column -->
+                    <div class="form-item">
+                        <mat-form-field class="input" appearance="fill">
+                            <mat-label>Enter Your Name</mat-label>
+                            <input matInput placeholder="Exmp:Ricardo" formControlName="name" required>
+                            <mat-error *ngIf="myError('name','required')">Required</mat-error>
+                            <mat-error *ngIf="(myError('name','minlength') || myError('name','maxlength') )">character
+                                3-15</mat-error>
+                        </mat-form-field>
+                    </div>
+                    <!-- Surname Column -->
+                    <div class="form-item">
+                        <mat-form-field class="input" appearance="fill">
+                            <mat-label>Enter Your Surname</mat-label>
+                            <input matInput placeholder="Exmp:Quaresma" formControlName="surname" required>
+                            <mat-error *ngIf="myError('surname','required')">Required</mat-error>
+                            <mat-error
+                                *ngIf="(myError('surname','minlength') || myError('surname','maxlength') )">character
+                                3-15</mat-error>
+                        </mat-form-field>
+                    </div>
+                    <!-- Email Column -->
+                    <div class="form-item">
+                        <mat-form-field class="input" appearance="fill">
+                            <mat-label>Enter your email</mat-label>
+                            <input matInput type="email" placeholder="rico@example.com" formControlName="email"
+                                autocomplete="off" required>
+                            <mat-error *ngIf="myError('email','required')">Required</mat-error>
+                            <mat-error *ngIf=" myError('email','maxlength') ">character 0-50</mat-error>
+                            <mat-error *ngIf="myError('email','email')">Please write email</mat-error>
+                        </mat-form-field>
+                    </div>
+                    <!-- Password Column -->
+                    <div class="form-item">
+                        <mat-form-field id="password" appearance="fill">
+                            <mat-label>Enter your password</mat-label>
+                            <input matInput autocomplete="off" [type]="passHide ? 'password' : 'text'" aria-label="a"
+                                formControlName="password" required>
+                            <mat-error *ngIf="myError('password','required')">Required</mat-error>
+                            <mat-error
+                                *ngIf=" (myError('password','minlength') || myError('password','maxlength') ) ">character
+                                3-8</mat-error>
+                            <button type="button" mat-icon-button matSuffix (click)="passHide = !passHide"
+                                [attr.aria-label]="'Hide password'" [attr.aria-pressed]="passHide">
+                                <mat-icon>{{passHide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                            </button>
+                        </mat-form-field>
+                    </div>
+                    <!-- RePassword Column -->
+                    <div class="form-item">
+                        <mat-form-field id="repassword" appearance="fill">
+                            <mat-label>Enter your password</mat-label>
+                            <input matInput autocomplete="off" [type]="repassHide ? 'password' : 'text'"
+                                aria-label="abc" formControlName="repassword">
+                            <mat-error *ngIf="myError('password','required')">Required</mat-error>
+                            <mat-error *ngIf="myError('repassword','matching')">password doesn't match</mat-error>
+                            <button type="button" mat-icon-button matSuffix (click)="repassHide = !repassHide"
+                                [attr.aria-label]="'Hide password'" [attr.aria-pressed]="repassHide">
+                                <mat-icon>{{repassHide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                            </button>
+                        </mat-form-field>
+                    </div>
+                    <!-- Register Button Column -->
+                    <div class="text-center py-2">
+                        <button id="registerButton" type="submit" mat-raised-button color="primary">Register</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

@@ -1,0 +1,39 @@
+<app-header></app-header>
+<div class="row d-flex justify-content-center align-items-center ">
+    <div class="col-lg-2 border border-dark">
+        <!-- Form -->
+        <div class="form  ">
+            <form [formGroup]="Loginform" (ngSubmit)="LoginSubmit(Loginform.value)">
+                <!-- Name Column -->
+                <div class="text-center py-2">
+                    <mat-form-field class="input" appearance="fill">
+                        <mat-label>Enter Your Name</mat-label>
+                        <input matInput placeholder="Exmp:Muhittin" formControlName="email" required>
+                        <mat-error *ngIf="myError('email','required')">Required</mat-error>
+                    </mat-form-field>
+                </div>
+                <!-- Password Column -->
+                <div class="text-center ">
+                    <mat-form-field id="loginpassword" appearance="fill">
+                        <mat-label>Enter your password</mat-label>
+                        <input matInput autocomplete="off" [type]="passHide ? 'password' : 'text'" aria-label="a"
+                            formControlName="password" required>
+                        <mat-error *ngIf="myError('password','required')">Required</mat-error>
+                        <button type="button" mat-icon-button matSuffix (click)="passHide = !passHide"
+                            [attr.aria-label]="'Hide password'" [attr.aria-pressed]="passHide">
+                            <mat-icon>{{passHide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                        </button>
+                    </mat-form-field>
+                </div>
+                <div class="d-flex text-center justify-content-around pb-2">
+                    <!-- Register Button  -->
+                    <button id="RegisterButton" type="button" routerLink="/register" mat-raised-button
+                        color="primary">Register</button>
+                    <!-- Login Button  -->
+                    <button id="Button" type="submit" mat-raised-button color="primary">Login</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

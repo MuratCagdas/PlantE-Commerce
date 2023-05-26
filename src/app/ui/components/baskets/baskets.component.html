@@ -1,0 +1,71 @@
+<app-header></app-header>
+<div class="d-sm-flex justify-content-center align-items-center my-5">
+    <!-- Calculate Column -->
+    <div class="col-md-3 mt-4">
+        <div class="d-sm-flex-column mb-3 justify-content-start border border-dark bg-warning bg-opacity-50">
+            <h2 class="text-center ">BASKET </h2>
+            <div class="flex-column " *ngFor="let basketItem of UserBasketList$ | async">
+                <div class="d-flex ">
+                    <div class="mt-2 flex-fill w-50">
+                        <h1>{{basketItem.name}}:</h1>
+                    </div>
+                    <div class="ms-2 mt-2 flex-fill">
+                        <h1>{{basketItem.peace}}</h1>
+                    </div>
+                    <div class="ms-2 mt-2 flex-fill">
+                        <h1>X</h1>
+                    </div>
+                    <div class="ms-2 mt-2 flex-fill">
+                        <h1>{{basketItem.price | currency }}</h1>
+                    </div>
+                    <div class="ms-2 mt-2 flex-fill">
+                        <h1>=</h1>
+                    </div>
+                    <div class="ms-2 mt-2 flex-fill w-50">
+                        <h1 (change)="TotalCost()">{{(basketItem.price * basketItem.peace) | currency}}</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex pt-2 justify-content-center align-items-center">
+                <div class="ms-2 mt-2 ">
+                    <h1>Total Cost</h1>
+                </div>
+                <div class="ms-2 mt-2 ">
+                    <h1>=</h1>
+                </div>
+                <div class="ms-2 mt-2 ">
+                    <h1>{{(TotalCost$ | async) | currency }}</h1>
+                </div>
+                <div class="ms-4"><button type="button" class="btn btn-success" (click)="AddOrders()">Purchase</button>
+                </div>
+            </div>
+        </div>
+        <!-- Card Column -->
+        <div class="my-5" *ngFor="let basketItem of UserBasketList$| async">
+            <div class="card mb-3 text-bg-info">
+                <div class="row g-0 ">
+                    <!-- Card Image Column -->
+                    <div class="col-md-4">
+                        <img src='{{basketItem.url}} ' class="img-fluid rounded-start" alt="...">
+                    </div>
+                    <!-- Card Body Column -->
+                    <div class="col-md-8">
+                        <div class="card-body text-center py-2">
+                            <!-- Name Column -->
+                            <h5 class="card-title text-center fs-4 ">{{basketItem.name}}</h5>
+                            <!-- Price Column -->
+                            <h5 class="card-price text-center fs-3 py-2">{{basketItem.price | currency }}</h5>
+                            <!-- Number Input -->
+                            <input type="number" class="card-peace form-control text-center my-3" placeholder="peace"
+                                [(ngModel)]="basketItem.peace" (change)="changePeace(basketItem.id,basketItem.peace)">
+                            <!--  Delete Icon -->
+                            <span class="card-delete text-center fs-3 py-2" placeholder="peace" [id]="basketItem.id"
+                                controller="baskets" [List]="UserBasketList$" appDelete></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

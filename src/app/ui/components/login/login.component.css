@@ -1,0 +1,8 @@
+.row {
+    margin-top: 20vh;
+}
+
+#loginpassword,
+.input {
+    width: 100%;
+}

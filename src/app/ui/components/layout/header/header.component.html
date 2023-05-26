@@ -1,0 +1,79 @@
+<!-- ======= Navigation ======= -->
+<nav class="navbar navbar-expand-lg  bg-body-tertiary">
+  <!-- Card Body Column -->
+  <div class="container-fluid">
+    <a class="navbar-brand ms-5 " routerLink="">
+      <span class="material-symbols-outlined">eco</span>
+    </a>
+    <!-- Navbar Toggler Column -->
+    <button class="navbar-toggler me-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse my-2" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto  ">
+        <li class="nav-item mx-2">
+          <!-- Plants Column -->
+          <button class="nav-link" mat-button [matMenuTriggerFor]="beforeMenu" type="button">Plants</button>
+          <mat-menu #beforeMenu="matMenu" xPosition="before">
+            <button mat-menu-item routerLink="/indoor" type="button">Indoor</button>
+            <button mat-menu-item routerLink="/outdoor" type="button">Outdoor</button>
+          </mat-menu>
+        </li>
+        <li class="nav-item mx-2">
+          <!-- Pots Column -->
+          <a class="nav-link " routerLink="/pots">Pots</a>
+        </li>
+        <li class="nav-item mx-2">
+          <!-- Gifts Column -->
+          <a class="nav-link" routerLink="/gifts">Gifts</a>
+        </li>
+        <li class="nav-item mx-2">
+          <!-- Basket Column -->
+          <button type="button" class="position-relative nav-link " routerLink="/baskets" aria-label="basket">
+            <mat-icon>shopping_cart</mat-icon>
+          </button>
+        </li>
+        <li class="nav-item mx-2">
+          <!-- Admin Panel Column -->
+            <a class="nav-link " routerLink="/admin" *ngIf="identityservice.isAdminAccess">ADMIN PANEL</a>
+        </li>
+        <!-- Person Column -->
+        <li class="nav-item me-4" *ngIf="!identityservice.isauthenticated">
+          <button type="button" class="position-relative nav-link " aria-label="login" mat-button
+            [matMenuTriggerFor]="belowMenu">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+              class="bi bi-person-fill-x" viewBox="0 0 16 16">
+              <path
+                d="M11 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm-9 8c0 1 1 1 1 1h5.256A4.493 4.493 0 0 1 8 12.5a4.49 4.49 0 0 1 1.544-3.393C9.077 9.038 8.564 9 8 9c-5 0-6 3-6 4Z" />
+              <path
+                d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Zm-.646-4.854.646.647.646-.647a.5.5 0 0 1 .708.708l-.647.646.647.646a.5.5 0 0 1-.708.708l-.646-.647-.646.647a.5.5 0 0 1-.708-.708l.647-.646-.647-.646a.5.5 0 0 1 .708-.708Z" />
+            </svg>
+            <mat-menu #belowMenu="matMenu" yPosition="below">
+              <button mat-menu-item routerLink="/login">Log in</button>
+              <button mat-menu-item routerLink="/register">Register</button>
+            </mat-menu>
+          </button>
+        </li>
+        <!-- Authonticated Person Column -->
+        <li class="nav-item me-4" *ngIf="identityservice.isauthenticated">
+          <button type="button" class="position-relative nav-link" aria-label="login" mat-button
+            [matMenuTriggerFor]="belowMenu">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+              class="bi bi-person-fill-add" viewBox="0 0 16 16">
+              <path
+                d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Zm.5-5v1h1a.5.5 0 0 1 0 1h-1v1a.5.5 0 0 1-1 0v-1h-1a.5.5 0 0 1 0-1h1v-1a.5.5 0 0 1 1 0Zm-2-6a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+              <path
+                d="M2 13c0 1 1 1 1 1h5.256A4.493 4.493 0 0 1 8 12.5a4.49 4.49 0 0 1 1.544-3.393C9.077 9.038 8.564 9 8 9c-5 0-6 3-6 4Z" />
+            </svg>
+            <mat-menu #belowMenu="matMenu" yPosition="below">
+              <button mat-menu-item (click)="logout()">Log out</button>
+              <button mat-menu-item routerLink="/like">Like</button>
+            </mat-menu>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- End Navigation -->

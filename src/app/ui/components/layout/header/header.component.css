@@ -1,0 +1,40 @@
+/*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+
+.material-symbols-outlined {
+    font-size: 40px;
+}
+
+.navbar {
+    background-color: rgb(14, 175, 14);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.nav-link {
+    border: none;
+    font-size: 24px;
+    background-color: rgb(14, 175, 14);
+    box-sizing: border-box;
+    color: black;
+    transition: color 1s;
+}
+
+.nav-link:hover {
+    color: wheat;
+}
+
+.nav-link:active {
+    color: wheat;
+}
+
+.navbar>.container-sm {
+    background-color: rgb(14, 175, 14);
+    padding-top: 5px;
+    display: inline;
+}
+
+.navbar-collapse {
+    background-color: rgb(14, 175, 14);
+    margin-bottom: 2px;
+}

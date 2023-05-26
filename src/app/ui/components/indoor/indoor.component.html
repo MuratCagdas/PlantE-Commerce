@@ -1,0 +1,45 @@
+<app-header></app-header>
+<div class="container d-md-flex-column align-items-center">
+    <div class="row mt-4">
+        <!-- Header Column -->
+        <h2 class="text-center ">Indoor Plant </h2>
+        <!-- Card Column -->
+        <div class="col-md-6 " *ngFor="let indoorProduct of indoorList$ | async">
+            <div class="card mb-3">
+                <div class="row g-0">
+                    <!-- Card Image Column -->
+                    <div class="col-md-4">
+                        <img src='{{indoorProduct.url}} ' class="img-fluid rounded-start" alt="...">
+                    </div>
+                    <!-- Card Body Column -->
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <!-- Name Column -->
+                            <h5 class="card-title text-center fs-4 ">{{indoorProduct.name}}</h5>
+                            <!-- Information Column -->
+                            <p class="card-text border border-dark">{{indoorProduct.information}}</p>
+                            <!-- Price Column -->
+                            <h5 class="card-price text-center fs-3 pt-2">{{indoorProduct.price | currency }}</h5>
+                            <div class="d-flex justify-content-center  align-items-center pt-2">
+                                <!-- Basket Button-->
+                                <div>
+                                    <button class="btn btn-success btn-sm me-3" type="button"
+                                        (click)="IndoorAddBasket(indoorProduct,indoorProduct.type,indoorProduct.name)">Add
+                                        Basket</button>
+                                </div>
+                                <!-- Like Button -->
+                                <div>
+                                    <button class="btn btn-primary  button" type="button"
+                                        (click)="addLike(indoorProduct,indoorProduct.color)">
+                                        <mat-icon [ngStyle]="{color:indoorProduct.color}"> favorite</mat-icon>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

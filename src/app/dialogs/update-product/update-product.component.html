@@ -1,0 +1,49 @@
+<div class="form ">
+  <form [formGroup]="dialogForm" (ngSubmit)="Submit(dialogForm.value)">
+    <!-- Name Column -->
+    <div class="text-center py-2">
+      <mat-form-field class="input" appearance="fill">
+        <mat-label>Name</mat-label>
+        <input matInput placeholder="Exmp:Muhittin" formControlName="name" required>
+      </mat-form-field>
+    </div>
+    <!-- Product Type Column -->
+    <div class="text-center py-2">
+      <mat-form-field appearance="fill">
+        <mat-label>Select</mat-label>
+        <mat-select formControlName="type" required>
+          <mat-option *ngFor="let type of typeProduct" [value]="type.name">
+            {{type.name}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <!-- Price Column -->
+    <div class="text-center py-2">
+      <mat-form-field class="input" appearance="fill">
+        <mat-label>Price</mat-label>
+        <input matInput type="number" placeholder="Exmp:Muhittin" formControlName="price" required>
+      </mat-form-field>
+    </div>
+    <!-- Url Column -->
+    <div class="text-center py-2">
+      <mat-form-field class="input" appearance="fill">
+        <mat-label>Path</mat-label>
+        <input matInput placeholder="Exmp:Muhittin" formControlName="url" required>
+      </mat-form-field>
+    </div>
+    <!-- Information Column -->
+    <div class="text-center">
+      <mat-form-field appearance="fill">
+        <mat-label>Textarea</mat-label>
+        <textarea matInput placeholder="information" formControlName="information" required></textarea>
+      </mat-form-field>
+    </div>
+    <div class="d-flex justify-content-center" mat-dialog-actions>
+      <!-- Submit Button -->
+      <button id="Button" type="submit" mat-raised-button color="primary">Update</button>
+      <!-- No Button -->
+      <button type="button" mat-raised-button color="primary" mat-button (click)="onNoClick()">Back</button>
+    </div>
+  </form>
+</div>
